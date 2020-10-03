@@ -23,7 +23,7 @@ public class PlayerDefend : MonoBehaviour
 
     void BasicDefend()
     {
-        if (CrossPlatformInputManager.GetButton("Defend") && playerScript.isGrounded && canDefend)
+        if (CrossPlatformInputManager.GetButton("Defend") && canDefend)
         {
             defending = true;
             defendTrigger.enabled = true;
@@ -34,10 +34,5 @@ public class PlayerDefend : MonoBehaviour
             defendTrigger.enabled = false;
         }
 
-        if (!playerScript.isGrounded)
-        {
-            defending = false;
-            defendTrigger.enabled = false;
-        }
     }
 }

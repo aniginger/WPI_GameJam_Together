@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float maxFallSpeed = -20f;
     float runSpeed = 0f;
+    public float windSpeed = 0f;
 
     //common bools
     public bool isGrounded;
@@ -33,12 +34,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (defendScript.defending)
-        {
-            myRigidBody.velocity = new Vector2(0, 0);
-            return;
-        }
-
         CheckSurroundings();
         Run();
         FlipSprite();
@@ -65,6 +60,12 @@ public class Player : MonoBehaviour
     private void Run()
     {
 
+        if (defendScript.defending)
+        {
+            myRigidBody.velocity = new Vector2(windSpeed, 0);
+            return;
+        }
+
         float controlThrow = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
         if (Mathf.Abs(controlThrow) > 0)
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
             {
                 runSpeed = maxRunSpeed;
             }
-            myRigidBody.velocity = new Vector2(controlThrow * runSpeed, myRigidBody.velocity.y);
+            myRigidBody.velocity = new Vector2(controlThrow * runSpeed + windSpeed, myRigidBody.velocity.y);
         }
         else
         {

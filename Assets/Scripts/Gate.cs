@@ -27,7 +27,7 @@ public class Gate : MonoBehaviour
         StopGate();
     }
 
-    public void LiftGate()
+    public void Activate()
     {
         myRigidBody.velocity = new Vector2(0, moveSpeed);
     }
