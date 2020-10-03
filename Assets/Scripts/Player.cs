@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D myRigidBody;
     public CapsuleCollider2D myBodyCollider;
     public BoxCollider2D myFeet;
+    PlayerDefend defendScript;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,19 @@ public class Player : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
+        defendScript = GetComponentInChildren<PlayerDefend>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (defendScript.defending)
+        {
+            myRigidBody.velocity = new Vector2(0, 0);
+            return;
+        }
+
         CheckSurroundings();
         Run();
         FlipSprite();
