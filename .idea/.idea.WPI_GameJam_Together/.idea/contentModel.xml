@@ -38,9 +38,26 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bridge.cs" t="Include" />
+          <e p="Elevator.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="EnemyBullet.cs" t="Include" />
+          <e p="EnemyShoot.cs" t="Include" />
+          <e p="Gate.cs" t="Include" />
           <e p="JumpCorrection.cs" t="Include" />
+          <e p="Level End.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="NextLevel.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PlayerAttack.cs" t="Include" />
+          <e p="PlayerBullet.cs" t="Include" />
+          <e p="PlayerDeath.cs" t="Include" />
+          <e p="PlayerDefend.cs" t="Include" />
+          <e p="PressButton.cs" t="Include" />
+          <e p="SceneHelper.cs" t="Include" />
+          <e p="TempButton.cs" t="Include" />
+          <e p="TogetherButton.cs" t="Include" />
+          <e p="Waterfall.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">

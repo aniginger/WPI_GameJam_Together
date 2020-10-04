@@ -22,5 +22,12 @@ public class MainMenu : MonoBehaviour
       //Exit the game
       Application.Quit();
    }
+   
+   public void ReturnToMenu()
+   {
+      //Loads the next indexed scene in the build settings queue
+      //(in this case, menu is of index 0 and the first level is of index 1)
+      SceneManager.LoadScene(0);
+   }
 
 }
