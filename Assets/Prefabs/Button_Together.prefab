@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019676685, y: 0.25833964}
+  m_Offset: {x: -0.00068724155, y: 0.23529255}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6722908, y: 0.21022701}
+  m_Size: {x: 0.44950175, y: 0.16413283}
   m_EdgeRadius: 0
 --- !u!70 &1279832325631242622
 CapsuleCollider2D:
@@ -195,11 +195,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forGate: 0
   forBridge: 0
+  forElevator: 0
+  for2Elevators: 0
   forFire: 1
+  player1: {fileID: 0}
+  player2: {fileID: 0}
   button1: {fileID: 7695917893523424938}
   button2: {fileID: 1279832325631242496}
   gate: {fileID: 0}
   bridge: {fileID: 0}
+  elevator: {fileID: 0}
+  elevator2: {fileID: 0}
   fire: {fileID: 0}
 --- !u!1 &7695917893523424938
 GameObject:
@@ -320,7 +326,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019676685, y: 0.25833964}
+  m_Offset: {x: 0.00032782555, y: 0.23538268}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -331,7 +337,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6722908, y: 0.21022701}
+  m_Size: {x: 0.44731092, y: 0.16431308}
   m_EdgeRadius: 0
 --- !u!70 &7695917893523424929
 CapsuleCollider2D:

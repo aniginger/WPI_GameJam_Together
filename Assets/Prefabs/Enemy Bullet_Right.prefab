@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6398963638327630525}
   - component: {fileID: 257956221}
   m_Layer: 12
-  m_Name: Enemy Bullet
+  m_Name: Enemy Bullet_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,4 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899a9b2b77eef456b84f399ffc28f7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: 0
+  right: 1
+  playerBullet: {fileID: 8076920038946595226, guid: c9312fab66b3e4d0aac48665b531150e,
+    type: 3}
   moveSpeed: 5

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    public bool left;
+    public bool right;
+    public GameObject playerBullet;
+
     [SerializeField] float moveSpeed = 7f;
     Rigidbody2D myRigidBody;
     CircleCollider2D myCircleCollider;
@@ -14,13 +18,21 @@ public class EnemyBullet : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myCircleCollider = GetComponent<CircleCollider2D>();
 
-        myRigidBody.velocity = new Vector2(-moveSpeed, 0);
+        if(left)
+        {
+            myRigidBody.velocity = new Vector2(-moveSpeed, 0);
+        }
+        if (right)
+        {
+            myRigidBody.velocity = new Vector2(moveSpeed, 0);
+        }
         Destroy(gameObject, 6f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        ReflectBullet();
         DestroyBullet();
     }
 
@@ -29,6 +41,15 @@ public class EnemyBullet : MonoBehaviour
         if(myCircleCollider.IsTouchingLayers(LayerMask.GetMask("Player")) ||
            myCircleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
+            Destroy(gameObject);
+        }
+    }
+
+    void ReflectBullet()
+    {
+        if (myCircleCollider.IsTouchingLayers(LayerMask.GetMask("Shield")))
+        {
+            Instantiate(playerBullet, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

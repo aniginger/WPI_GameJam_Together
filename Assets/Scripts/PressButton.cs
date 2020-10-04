@@ -6,17 +6,20 @@ public class PressButton : MonoBehaviour
 {
     public bool forGate;
     public bool forBridge;
+    public bool forElevator;
     public bool forFire;
 
     BoxCollider2D myBoxCollider;
     CapsuleCollider2D myCapsuleCollider;
     Rigidbody2D myRigidbody;
 
-    //Activate gate & bridge
+    //Activate items
     public GameObject gate;
     Gate gateScript;
     public GameObject bridge;
     Bridge bridgeScript;
+    public GameObject elevator;
+    Elevator elevatorScript;
     public GameObject fire;
 
     // Start is called before the first frame update
@@ -33,6 +36,10 @@ public class PressButton : MonoBehaviour
         if (forBridge)
         {
             bridgeScript = bridge.GetComponent<Bridge>();
+        }
+        if (forElevator)
+        {
+            elevatorScript = elevator.GetComponent<Elevator>();
         }
     }
 
@@ -55,6 +62,10 @@ public class PressButton : MonoBehaviour
                 if (forBridge)
                 {
                     bridgeScript.Activate();
+                }
+                if (forElevator)
+                {
+                    elevatorScript.Activate();
                 }
                 if (forFire)
                 {

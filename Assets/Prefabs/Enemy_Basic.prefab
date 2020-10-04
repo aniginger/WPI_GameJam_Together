@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6516250548923079092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6516250549116041930}
@@ -168,11 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallCheck: {fileID: 6516250548923079099}
   isTouchingWall: 0
-  wallCheckDistance: -1.3
+  wallCheckDistance: 0.6
   groundCheck: {fileID: 6516250550539037417}
   isTouchingGround: 1
   groundCheckDistance: -0.8
-  health: 30
   walkSpeed: 2.5
 --- !u!1 &6516250550539037418
 GameObject:

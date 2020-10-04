@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - Weapon
   - Shield
   - Enemy
-  - 
-  - 
-  - 
+  - Background
+  - Next Level
+  - Pressure
   - 
   - 
   - 
@@ -41,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1807905847
+    locked: 0
+  - name: Interactable - Below
+    uniqueID: 1623883641
+    locked: 0
+  - name: Foreground
+    uniqueID: 2155013333
+    locked: 0
+  - name: Interactable - Above
+    uniqueID: 3163048395
+    locked: 0
+  - name: Player
+    uniqueID: 447343797
+    locked: 0
+  - name: Enemy
+    uniqueID: 3705923583
     locked: 0

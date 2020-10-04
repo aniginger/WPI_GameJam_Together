@@ -36,6 +36,7 @@ public class Gate : MonoBehaviour
         if(transform.position.y >= basePosition.y + riseDistance)
         {
             myRigidBody.velocity = new Vector2(0, 0);
+            Destroy(gameObject);
         }
     }
 }

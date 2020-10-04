@@ -82,7 +82,8 @@ public class Enemy : MonoBehaviour
         {
             isGrounded = false;
         }
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, LayerMask.GetMask("Ground"));
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, LayerMask.GetMask("Ground")) ||
+                         Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, LayerMask.GetMask("Pressure"));
         isTouchingGround = Physics2D.Raycast(groundCheck.position, transform.up, groundCheckDistance, LayerMask.GetMask("Ground"));
     }
 
