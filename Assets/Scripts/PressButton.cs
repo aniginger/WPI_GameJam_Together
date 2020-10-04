@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PressButton : MonoBehaviour
 {
+    bool active = true;
+
     public bool forGate;
     public bool forBridge;
     public bool forElevator;
+    public bool forWaterfall;
     public bool forFire;
 
-    BoxCollider2D myBoxCollider;
     CapsuleCollider2D myCapsuleCollider;
     Rigidbody2D myRigidbody;
 
@@ -20,12 +22,13 @@ public class PressButton : MonoBehaviour
     Bridge bridgeScript;
     public GameObject elevator;
     Elevator elevatorScript;
+    public GameObject waterfall;
+    Waterfall waterfallScript;
     public GameObject fire;
 
     // Start is called before the first frame update
     void Start()
     {
-        myBoxCollider = GetComponent<BoxCollider2D>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
 
@@ -41,6 +44,10 @@ public class PressButton : MonoBehaviour
         {
             elevatorScript = elevator.GetComponent<Elevator>();
         }
+        if (forWaterfall)
+        {
+            waterfallScript = waterfall.GetComponent<Waterfall>();
+        }
     }
 
     // Update is called once per frame
@@ -51,9 +58,9 @@ public class PressButton : MonoBehaviour
 
     void GetPressed()
     {
-        if (myBoxCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            if (!myBoxCollider.isTrigger)
+            if (active)
             {
                 if (forGate)
                 {
@@ -67,6 +74,10 @@ public class PressButton : MonoBehaviour
                 {
                     elevatorScript.Activate();
                 }
+                if (forWaterfall)
+                {
+                    waterfallScript.StopWaterfall();
+                }
                 if (forFire)
                 {
                     IEnumerator WaitToKillFire()
@@ -77,8 +88,7 @@ public class PressButton : MonoBehaviour
                     StartCoroutine(WaitToKillFire());
                 }
             }
-            myBoxCollider.isTrigger = true;
-            myCapsuleCollider.isTrigger = true;
+            active = false;
         }
     }
 }

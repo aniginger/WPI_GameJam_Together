@@ -35,7 +35,8 @@ public class PlayerDeath : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (myBody.IsTouchingLayers(LayerMask.GetMask("Enemy")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        if (myBody.IsTouchingLayers(LayerMask.GetMask("Enemy")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Enemy")) ||
+            myBody.IsTouchingLayers(LayerMask.GetMask("Projectile")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Projectile")))
         {
             playerDying = true;
             myRigidBody.gravityScale = 0;

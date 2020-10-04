@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -122775939084789054}
   - component: {fileID: 3932884992672933388}
   - component: {fileID: 6398963638327630525}
-  - component: {fileID: 257956221}
-  m_Layer: 17
-  m_Name: Enemy Bullet_Left
+  - component: {fileID: -1999356776596807750}
+  m_Layer: 10
+  m_Name: Player_Bullet_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,11 +92,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1131918901
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3108a134c3e3b4e20873b91b9df5d752, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9579922, b: 0.9579922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00064983964}
   serializedVersion: 2
   m_Radius: 2.4679253
---- !u!114 &257956221
+--- !u!114 &-1999356776596807750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,11 +131,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8076920038946595226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899a9b2b77eef456b84f399ffc28f7f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 334856baf83ad48d7ba75c488223f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   left: 1
   right: 0
-  playerBullet: {fileID: 8076920038946595226, guid: 698f27dbceb6541e38730402d00ca83c,
-    type: 3}
-  moveSpeed: 5
+  moveSpeed: 7

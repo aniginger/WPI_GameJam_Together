@@ -178,45 +178,23 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 51171960}
     m_ColliderPaths:
-    - - X: 50000100
+    - - X: 39999900
         Y: 99999959
-      - X: 50000100
-        Y: 104375028
-      - X: 50000070
-        Y: 104375077
-      - X: 48750034
-        Y: 105000095
-      - X: 48750012
-        Y: 105000100
-      - X: 39999959
-        Y: 105000100
       - X: 39999900
-        Y: 105000041
-      - X: 39999900
-        Y: 99999959
-      - X: 39999959
-        Y: 99999900
-      - X: 50000041
-        Y: 99999900
-    - - X: 20000100
-        Y: 99999959
-      - X: 20000100
-        Y: 104375028
-      - X: 20000070
-        Y: 104375077
-      - X: 18750034
+        Y: 104375162
+      - X: 38750034
         Y: 105000095
-      - X: 18750012
+      - X: 38750012
         Y: 105000100
-      - X: 9999959
+      - X: 29999959
         Y: 105000100
-      - X: 9999900
+      - X: 29999900
         Y: 105000041
-      - X: 9999900
+      - X: 29999900
         Y: 99999959
-      - X: 9999959
+      - X: 29999959
         Y: 99999900
-      - X: 20000041
+      - X: 39999959
         Y: 99999900
     - - X: 50000000
         Y: -13750000
@@ -248,16 +226,11 @@ CompositeCollider2D:
         Y: -15000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 1.9999748, y: 9.99999}
-      - {x: 1.999992, y: 10.437515}
-      - {x: 1.8749952, y: 10.50001}
-      - {x: 0.99999, y: 10.499974}
-      - {x: 1.0000252, y: 9.99999}
-    - - {x: 4.9999747, y: 9.99999}
-      - {x: 4.999992, y: 10.437515}
-      - {x: 4.874995, y: 10.50001}
-      - {x: 3.99999, y: 10.499974}
-      - {x: 4.0000253, y: 9.99999}
+    - - {x: 3.9999664, y: 9.99999}
+      - {x: 3.9999752, y: 10.437524}
+      - {x: 3.8749952, y: 10.50001}
+      - {x: 2.99999, y: 10.499974}
+      - {x: 3.0000253, y: 9.99999}
     - - {x: 4.9374833, y: -1.5}
       - {x: 5, y: -1.3751723}
       - {x: 5.0000076, y: -1.4375076}
@@ -395,16 +368,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: 1, y: 10, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: 4, y: 10, z: 0}
+  - first: {x: 3, y: 10, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -417,17 +381,17 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 16d5391261cf746538da30aead6c3d53, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4c39e5a08938b45e5bda811910a4da12, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: -1341762786555436703, guid: 382abc66ab6bd4baca89ed10d2769ff7,
       type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 5994016932566385413, guid: 382abc66ab6bd4baca89ed10d2769ff7,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -446,7 +410,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3334,7 +3298,6 @@ GameObject:
   - component: {fileID: 1316468147843702311}
   - component: {fileID: 1316468147843702308}
   - component: {fileID: 1316468147843702310}
-  - component: {fileID: 1316468147843702309}
   - component: {fileID: 1316468147843702313}
   - component: {fileID: 1316468147843702312}
   m_Layer: 9
@@ -3395,32 +3358,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1316468147843702309
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316468147843702306}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0019676685, y: 0.25833964}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3, y: 1.3}
-    newSize: {x: 3.9, y: 3.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6722908, y: 0.21022701}
-  m_EdgeRadius: 0
 --- !u!50 &1316468147843702310
 Rigidbody2D:
   serializedVersion: 4
@@ -3471,10 +3408,12 @@ MonoBehaviour:
   forGate: 1
   forBridge: 0
   forElevator: 0
+  forWaterfall: 0
   forFire: 0
   gate: {fileID: 1040735361}
   bridge: {fileID: 0}
   elevator: {fileID: 0}
+  waterfall: {fileID: 0}
   fire: {fileID: 0}
 --- !u!70 &1316468147843702313
 CapsuleCollider2D:
@@ -3486,7 +3425,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0003123333, y: -0.041311923}
@@ -3719,7 +3658,7 @@ PrefabInstance:
     - target: {fileID: 1750318354155871310, guid: 0a4b8077d6dff4be88c4f8b754a4efad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.75
+      value: 11.54
       objectReference: {fileID: 0}
     - target: {fileID: 1750318354155871310, guid: 0a4b8077d6dff4be88c4f8b754a4efad,
         type: 3}
@@ -4580,7 +4519,6 @@ GameObject:
   - component: {fileID: 5242962430961110325}
   - component: {fileID: 5242962430961110326}
   - component: {fileID: 5242962430961110324}
-  - component: {fileID: 5242962430961110327}
   - component: {fileID: 5242962430961110331}
   - component: {fileID: 5242962430961110330}
   m_Layer: 9
@@ -4676,32 +4614,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5242962430961110327
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5242962430961110320}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0019676685, y: 0.25833964}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3, y: 1.3}
-    newSize: {x: 3.9, y: 3.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6722908, y: 0.21022701}
-  m_EdgeRadius: 0
 --- !u!114 &5242962430961110330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4717,10 +4629,12 @@ MonoBehaviour:
   forGate: 1
   forBridge: 0
   forElevator: 0
+  forWaterfall: 0
   forFire: 0
   gate: {fileID: 126648800}
   bridge: {fileID: 0}
   elevator: {fileID: 0}
+  waterfall: {fileID: 0}
   fire: {fileID: 0}
 --- !u!70 &5242962430961110331
 CapsuleCollider2D:
@@ -4732,7 +4646,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0003123333, y: -0.041311923}

@@ -38,6 +38,11 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if (CrossPlatformInputManager.GetButton("Defend"))
+        {
+            myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
+            return;
+        }
         CheckSurroundings();
         Run();
         FlipSprite();

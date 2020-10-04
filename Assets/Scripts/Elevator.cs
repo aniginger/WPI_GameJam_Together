@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
+
     Rigidbody2D myRigidBody;
     BoxCollider2D myBoxCollider;
     [SerializeField] float moveSpeed = 0.5f;
     [SerializeField] float finalYPos;
+    float startPos;
+    bool activated;
 
     // Start is called before the first frame update
     void Start()
     {
+        startPos = transform.position.y;
         myRigidBody = GetComponent<Rigidbody2D>();
         myBoxCollider = GetComponent<BoxCollider2D>();
     }
@@ -19,18 +23,24 @@ public class Elevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StopElevating();
+        KeepElevating();
     }
 
     public void Activate()
     {
         myRigidBody.velocity = new Vector2(0, moveSpeed);
+        activated = true;
     }
-    void StopElevating()
+    void KeepElevating()
     {
         if(transform.position.y >= finalYPos)
         {
-            myRigidBody.velocity = new Vector2(0, 0);
+            myRigidBody.velocity = new Vector2(0, -moveSpeed);
+        }
+        if(transform.position.y <= startPos && activated)
+        {
+            myRigidBody.velocity = new Vector2(0, moveSpeed);
         }
     }
+
 }
