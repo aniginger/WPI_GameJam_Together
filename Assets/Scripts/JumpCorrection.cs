@@ -9,6 +9,7 @@ public class JumpCorrection : MonoBehaviour
     [SerializeField] float lowJumpMultiplier = 2f;
 
     public Rigidbody2D myRigidBody;
+    public GameObject player;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,6 @@ public class JumpCorrection : MonoBehaviour
     }
     void adjustLowJump()
     {
-        GameObject player = GameObject.Find("Player");
         Player playerScript = player.GetComponent<Player>();
 
 

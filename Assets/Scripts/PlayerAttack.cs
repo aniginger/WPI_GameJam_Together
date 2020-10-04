@@ -28,7 +28,6 @@ public class PlayerAttack : MonoBehaviour
         {
             attacking = true;
             attackTimer = attackCooldown;
-
             attackTrigger.enabled = true;
         }
 

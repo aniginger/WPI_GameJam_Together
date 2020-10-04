@@ -11,12 +11,14 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] float moveSpeed = 7f;
     Rigidbody2D myRigidBody;
     CircleCollider2D myCircleCollider;
+    public AudioSource shieldSound;
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myCircleCollider = GetComponent<CircleCollider2D>();
+        shieldSound = GetComponent<AudioSource>();
 
         if(left)
         {
@@ -49,8 +51,10 @@ public class EnemyBullet : MonoBehaviour
     {
         if (myCircleCollider.IsTouchingLayers(LayerMask.GetMask("Shield")))
         {
+            shieldSound.Play();
             Instantiate(playerBullet, transform.position, Quaternion.identity);
             Destroy(gameObject);
+ 
         }
     }
 

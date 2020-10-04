@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     //common bools
     public bool isGrounded;
     public bool noUpdate;
+    public bool canDefend;
 
     //set up components
     public Rigidbody2D myRigidBody;
@@ -27,7 +28,11 @@ public class Player : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
-        defendScript = GetComponentInChildren<PlayerDefend>();
+        if (canDefend)
+        {
+            defendScript = GetComponentInChildren<PlayerDefend>();
+        }
+
 
     }
 
@@ -68,11 +73,13 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-
-        if (defendScript.defending)
+        if (canDefend)
         {
-            myRigidBody.velocity = new Vector2(0, 0);
-            return;
+            if (defendScript.defending)
+            {
+                myRigidBody.velocity = new Vector2(0, 0);
+                return;
+            }
         }
 
         float controlThrow = CrossPlatformInputManager.GetAxisRaw("Horizontal");
